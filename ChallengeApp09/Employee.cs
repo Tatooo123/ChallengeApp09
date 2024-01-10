@@ -1,4 +1,4 @@
-﻿namespace ChallengeApp;
+﻿namespace ChallengeApp09;
 
 public class Employee
 {
@@ -11,7 +11,7 @@ public class Employee
     public string FirstName { get; set; }
     public string LastName { get; set; }
     public int Age { get; set; }
-    private List<float> points = new List<float>();
+    public List<float> points = new List<float>();
 
     public void AddPoints(float score)
     { 

@@ -1,4 +1,4 @@
-﻿namespace ChallengeApp.Tests
+﻿namespace ChallengeApp09.Tests
 {
     internal class TypeTests
     {

@@ -1,4 +1,4 @@
-﻿namespace ChallengeApp
+﻿namespace ChallengeApp09
 {
     public class Statistics
     {
