@@ -9,6 +9,8 @@ namespace ChallengeApp09.Tests
         {
             // arrange
             var worker = new Employee("Mark", "Twain", 99);
+            float average = 11 + 12.5F + 13 - 3;
+            average /= 4;
 
             // act & assert
             worker.AddPoints(11);
@@ -22,12 +24,6 @@ namespace ChallengeApp09.Tests
             Assert.AreEqual(worker.GetStatistics().Minimum, -3);
             Assert.AreEqual(worker.GetStatistics().Maximum, 13);
 
-            float average = 0;
-            foreach (float point in worker.points)
-            {
-                average += point;
-            }
-            average /= worker.points.Count;
             Assert.AreEqual(worker.GetStatistics().Average, average);
         }
     }
