@@ -62,7 +62,9 @@ Console.WriteLine($"    Max:     {statistics.Maximum:N2}");
 Console.WriteLine($"    Average: {statistics.Average:N2}");
 
 Console.WriteLine(" - and his punctation:");
-foreach (var score in workers[maxScoreWorkerIndex].points)
+List<float> points = workers[maxScoreWorkerIndex].GetPointList();
+
+foreach (var score in points)
 {
     Console.WriteLine($"    score: {score:N1}");
 }

@@ -17,6 +17,11 @@ public class Employee
         this.points.Add(score);
     }
 
+    public List<float> GetPointList()
+    {
+        return this.points;
+    }
+
     public float Result
     {
         get
