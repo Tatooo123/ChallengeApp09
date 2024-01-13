@@ -1,5 +1,3 @@
-using System.Drawing;
-
 namespace ChallengeApp09.Tests
 {
     public class Tests
