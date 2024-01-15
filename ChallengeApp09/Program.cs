@@ -1,11 +1,12 @@
 ﻿using ChallengeApp09;
+using static System.Formats.Asn1.AsnWriter;
 
-Console.WriteLine("------------------");
-Console.WriteLine("Hello, I'am Tatooo");
-Console.WriteLine("Program started   ");
-Console.WriteLine("------------------");
+//Console.WriteLine("------------------");
+//Console.WriteLine("Hello, I'am Tatooo");
+//Console.WriteLine("Program started   ");
+//Console.WriteLine("------------------");
 
-Employee worker0 = new Employee("Dorothy", "Longbutton", 41);
+Employee worker0 = new Employee("Frank", "Longbutton", 41);
 Employee worker1 = new Employee("Tom", "Jones", 24);
 Employee worker2 = new Employee("Susie", "Jones", 29);
 Employee worker3 = new Employee("Mark", "Kowalski", 39);
@@ -16,11 +17,11 @@ List<Employee> workers = new List<Employee>()
 {
     worker0, worker1, worker2, worker3 
 };
-worker0.AddPoints(1);
-worker0.AddPoints(4);
+worker0.AddPoints(300);
+worker0.AddPoints("99");
 worker0.AddPoints(10.5F);
 worker0.AddPoints(3);
-worker0.AddPoints(6);
+worker0.AddPoints("ola");
 
 worker1.AddPoints(10);
 worker1.AddPoints(7);
@@ -48,11 +49,12 @@ foreach (var worker in workers)
         maxScore = worker.Result;
         maxScoreWorkerIndex = ii;
     }
-    Console.WriteLine($"{ii:N0}" + " - " + workers[ii].FirstName.PadRight(8, ' ') + " " + workers[ii].LastName.PadRight(12, ' ') + $" age {workers[ii].Age:N0}" + $" score: {workers[ii].Result:N1} ");
+//    Console.WriteLine($"{ii:N0}" + " - " + workers[ii].FirstName.PadRight(8, ' ') + " " + workers[ii].LastName.PadRight(12, ' ') + $" age {workers[ii].Age:N0}" + $" score: {workers[ii].Result:N1} ");
     ii++;
 }
+maxScoreWorkerIndex = 0;
 Console.WriteLine("------------------");
-Console.WriteLine("Max score worker is:");
+Console.WriteLine("Worker score sumary:");
 Console.WriteLine(maxScoreWorkerIndex.ToString().PadLeft(3, ' ') + " - " + workers[maxScoreWorkerIndex].FirstName.PadRight(8, ' ') + " " + workers[maxScoreWorkerIndex].LastName.PadRight(12, ' ') + " age " + workers[maxScoreWorkerIndex].Age.ToString().PadLeft(3, ' ') + " score: " + maxScore.ToString().PadLeft(3, ' '));
 
 var statistics = workers[maxScoreWorkerIndex].GetStatistics();
