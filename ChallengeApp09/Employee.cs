@@ -28,7 +28,7 @@ public class Employee
     public void AddPoints(double score)
     {
         if (score < float.MaxValue && score >= float.MinValue)
-            this.points.Add((float)Math.Round(score));
+            this.AddPoints((float)Math.Round(score));
         else 
             Console.WriteLine("     *** WARNING ***   " + '"' + score + '"' + " is out of range");
     }
